@@ -1,0 +1,31 @@
+﻿@{
+
+    var studentList = (List<StudentModel>)ViewData["listOfStudent"];
+
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            >
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var s in studentList)
+        {
+            <tr>
+                <td>@s.studentId</td>
+                <td>@s.studentName</td>
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+

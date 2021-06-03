@@ -1,0 +1,35 @@
+﻿@{
+    var Students = (List<StudentModel>)ViewData["Students"];
+    var id = ViewData["studentId"];
+}
+
+
+
+<p> first id = @id</p>
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            >
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var s in Students)
+        {
+            <tr>
+                <td>@s.studentId</td>
+                <td>@s.studentName</td>
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
